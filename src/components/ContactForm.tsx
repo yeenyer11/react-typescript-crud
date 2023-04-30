@@ -38,8 +38,8 @@ const ContactForm : FC<ContactFormProps>= ({dispatch,dataToEdit,toggleModal})=> 
             setErrorMsg("All the fields are required.");
             return;
 
-        }else if (!phone.trim().match(/^\d{10/g)){
-            setErrorMsg("Please enter a valid 10 digit phon number.")
+        } else if (!phone.trim().match(/^\d{10}$/g)) {
+            setErrorMsg("Please enter a valid 10 digit phone number.");
             return;
         }
 
